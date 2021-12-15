@@ -1,0 +1,12 @@
+assume all input is correct
+
+------------------------------
+accumulator
+
+every time \n 
+-> op = 00
+-> if inputs have [+ - * /]
+    -> op = case([+-*/])
+-> res = cal(op,input,acc)
+-> res -> out_buffer
+-> 0 -> in_buffer
