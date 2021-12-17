@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testInput_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testInput" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,420.640 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,035.641 ns"></ZoomEndTime>
+      <Cursor1Time time="1,683.140 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="256"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/testInput/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/nums" type="array">
+      <obj_property name="ElementShortName">nums[47:0]</obj_property>
+      <obj_property name="ObjectShortName">nums[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/ops_out" type="array">
+      <obj_property name="ElementShortName">ops_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ops_out[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/cal_out" type="logic">
+      <obj_property name="ElementShortName">cal_out</obj_property>
+      <obj_property name="ObjectShortName">cal_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/int_buffer" type="array">
+      <obj_property name="ElementShortName">int_buffer[23:0]</obj_property>
+      <obj_property name="ObjectShortName">int_buffer[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/fp_buffer" type="array">
+      <obj_property name="ElementShortName">fp_buffer[23:0]</obj_property>
+      <obj_property name="ObjectShortName">fp_buffer[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/nums_buffer" type="array">
+      <obj_property name="ElementShortName">nums_buffer[47:0]</obj_property>
+      <obj_property name="ObjectShortName">nums_buffer[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/state" type="logic">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/fp_counter" type="array">
+      <obj_property name="ElementShortName">fp_counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">fp_counter[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/translated" type="array">
+      <obj_property name="ElementShortName">translated[3:0]</obj_property>
+      <obj_property name="ObjectShortName">translated[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/calReady" type="logic">
+      <obj_property name="ElementShortName">calReady</obj_property>
+      <obj_property name="ObjectShortName">calReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/ops" type="array">
+      <obj_property name="ElementShortName">ops[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ops[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/last_ena" type="logic">
+      <obj_property name="ElementShortName">last_ena</obj_property>
+      <obj_property name="ObjectShortName">last_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/isNum" type="logic">
+      <obj_property name="ElementShortName">isNum</obj_property>
+      <obj_property name="ObjectShortName">isNum</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/write_en" type="logic">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/n1/n_clk" type="logic">
+      <obj_property name="ElementShortName">n_clk</obj_property>
+      <obj_property name="ObjectShortName">n_clk</obj_property>
+   </wvobject>
+</wave_config>

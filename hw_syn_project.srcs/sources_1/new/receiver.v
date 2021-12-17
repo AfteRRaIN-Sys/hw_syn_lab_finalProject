@@ -1,5 +1,5 @@
 module receiver(
-    input clk,
+    input clk, //baud
     input bit_in,
     output reg received,
     output reg [7:0] data_out
