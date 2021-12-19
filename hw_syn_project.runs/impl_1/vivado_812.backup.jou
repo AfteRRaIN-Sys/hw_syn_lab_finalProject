@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sat Dec 18 22:27:47 2021
+# Process ID: 812
+# Current directory: C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.runs/impl_1
+# Command line: vivado.exe -log calculator.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source calculator.tcl -notrace
+# Log file: C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.runs/impl_1/calculator.vdi
+# Journal file: C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source calculator.tcl -notrace

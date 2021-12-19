@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.runs/synth_1/calculator.tcl"
+  variable script "C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.runs/synth_1/calculator.tcl"
   variable category "vivado_synth"
 }
 
@@ -72,37 +72,38 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.cache/wt [current_project]
-set_property parent.project_path C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.cache/wt [current_project]
+set_property parent.project_path C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/AquaTimeZ/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.cache/ip [current_project]
+set_property ip_output_repo c:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/CalController.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/ToAscii.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/adder.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/br_gen.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/byteAdder.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/byteSubtract.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/inputModule.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/mulAll.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/mulEach.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/outputModule.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/receiver.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/singlePulser.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/transmitter.v
-  C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/sources_1/new/calculator.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/CalController.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/ToAscii.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/adder.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/br_gen.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/byteAdder.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/byteSubtract.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/inputModule.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/mulAll.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/mulEach.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/outputModule.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/receiver.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/singlePulser.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/transmitter.v
+  C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/calculator.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,8 +114,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/constrs_1/new/Basys-3-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.srcs/constrs_1/new/Basys-3-Master.xdc]
+read_xdc C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/constrs_1/new/Basys-3-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/constrs_1/new/Basys-3-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

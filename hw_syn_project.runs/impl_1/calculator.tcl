@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.runs/impl_1/calculator.tcl"
+  variable script "C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.runs/impl_1/calculator.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -126,7 +127,7 @@ set rc [catch {
   set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
   open_checkpoint calculator_routed.dcp
-  set_property webtalk.parent_dir C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.cache/wt [current_project]
 set_property TOP calculator [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

@@ -1,0 +1,24 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto adc222406813497480ac59dc50ffd483 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testInput_behav xil_defaultlib.testInput xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 48 for port 'in_acc' [C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.srcs/sources_1/new/CalController.v:76]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.singlePulser
+Compiling module xil_defaultlib.inputModule
+Compiling module xil_defaultlib.byteAdder
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.byteSubtract
+Compiling module xil_defaultlib.mulEach
+Compiling module xil_defaultlib.mulAll
+Compiling module xil_defaultlib.CalController
+Compiling module xil_defaultlib.ToAscii
+Compiling module xil_defaultlib.outputModule
+Compiling module xil_defaultlib.testInput
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testInput_behav

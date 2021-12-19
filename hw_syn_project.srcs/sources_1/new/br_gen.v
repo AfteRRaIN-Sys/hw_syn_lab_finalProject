@@ -3,7 +3,10 @@ module baudrate_gen(
     output reg baud
     );
     
-    integer counter;
+    integer counter = 0;
+    initial begin
+        baud <= 0;
+    end
     always @(posedge clk)
     begin
         counter = counter + 1;

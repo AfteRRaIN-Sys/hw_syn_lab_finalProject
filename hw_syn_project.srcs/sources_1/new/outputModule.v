@@ -80,9 +80,9 @@ module outputModule(
             //byte5
             res_buffer[111-40:104-40] <= ascii5;
             //byte6
-            res_buffer[111-(8*6):104-(8*6)] <= 8'h2E;
+            res_buffer[111-(8*6):104-(8*6)] <= ascii6;
             //byte7
-            res_buffer[111-56:104-56] <= ascii6;
+            res_buffer[111-56:104-56] <= 8'h2E;
             //byte8
             res_buffer[111-64:104-64]<= ascii7;
             //byte9
@@ -98,7 +98,7 @@ module outputModule(
         end
         else begin
             //overflow
-            res_buffer[111:111-23] <= 24'h4E2F41;
+            res_buffer[111:111-23] <= 24'h4E2F41; //N/A
             res_buffer[111-24:0] <= 88'd0;
         end
     end

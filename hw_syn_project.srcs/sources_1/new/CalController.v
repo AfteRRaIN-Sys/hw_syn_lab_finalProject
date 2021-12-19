@@ -40,38 +40,9 @@ module CalController(
     
     initial begin 
         acc = 0;
-        
     end
     
-    // adder section 
-//    byteAdder Badder1 (D1,   C1,   B1,   A1,  cout1,  data_in [3:0],   acc [3:0],   1'b0,   opcode);
-//    byteAdder Badder2 (D2,   C2,   B2,   A2,  cout2,  data_in [7:4],   acc [7:4],   cout1,  opcode);
-//    byteAdder Badder3 (D3,   C3,   B3,   A3,  cout3,  data_in [11:8],  acc [11:8],  cout2,  opcode);
-//    byteAdder Badder4 (D4,   C4,   B4,   A4,  cout4,  data_in [15:12], acc [15:12], cout3,  opcode);
-//    byteAdder Badder5 (D5,   C5,   B5,   A5,  cout5,  data_in [19:16], acc [19:16], cout4,  opcode);
-//    byteAdder Badder6 (D6,   C6,   B6,   A6,  cout6,  data_in [23:20], acc [23:20], cout5,  opcode);
-//    byteAdder Badder7 (D7,   C7,   B7,   A7,  cout7,  data_in [27:24], acc [27:24], cout6,  opcode);
-//    byteAdder Badder8 (D8,   C8,   B8,   A8,  cout8,  data_in [31:28], acc [31:28], cout7,  opcode);
-//    byteAdder Badder9 (D9,   C9,   B9,   A9,  cout9,  data_in [35:32], acc [35:32], cout8,  opcode);
-//    byteAdder Badder10(D10,  C10,  B10,  A10, cout10, data_in [39:36], acc [39:36], cout9,  opcode);
-//    byteAdder Badder11(D11,  C11,  B11,  A11, cout11, data_in [43:40], acc [43:40], cout10, opcode);
-//    byteAdder Badder12(D12,  C12,  B12,  A12, cout12, data_in [47:44], acc [47:44], cout11, opcode);
-    
-//    wire [3:0] DCBA1, DCBA2, DCBA3, DCBA4, DCBA5, DCBA6, DCBA7, DCBA8, DCBA9, DCBA10, DCBA11, DCBA12;
-//    assign DCBA1 =  {D1, C1, B1, A1};
-//    assign DCBA2 =  {D2, C2, B2, A2};
-//    assign DCBA3 =  {D3, C3, B3, A3};
-//    assign DCBA4 =  {D4, C4, B4, A4};
-//    assign DCBA5 =  {D5, C5, B5, A5};
-//    assign DCBA6 =  {D6, C6, B6, A6};
-//    assign DCBA7 =  {D7, C7, B7, A7};
-//    assign DCBA8 =  {D8, C8, B8, A8};
-//    assign DCBA9 =  {D9, C9, B9, A9};
-//    assign DCBA10 = {D10,C10,B10,A10};
-//    assign DCBA11 = {D11,C11,B11,A11};
-//    assign DCBA12 = {D12,C12,B12,A12};
 
-//    assign overflo = cout12;
     wire [47:0] adout;
     wire overflo;
     adder adder1(adout, overflo, data_in, acc, opcode);
@@ -90,6 +61,7 @@ module CalController(
     byteSubtract Bsub11(H11,  G11,  F11,  E11, bout11, data_in [43:40], acc [43:40], bout10, opcode);
     byteSubtract Bsub12(H12,  G12,  F12,  E12, bout12, data_in [47:44], acc [47:44], bout11, opcode);
     
+    //data_in - acc
     byteSubtract bsub1 (h1,   g1,   f1,   e1,  Bout1,  acc [3:0],   data_in [3:0],   1'b0,   opcode);
     byteSubtract bsub2 (h2,   g2,   f2,   e2,  Bout2,  acc [7:4],   data_in [7:4],   Bout1,  opcode);
     byteSubtract bsub3 (h3,   g3,   f3,   e3,  Bout3,  acc [11:8],  data_in [11:8],  Bout2,  opcode);
@@ -113,6 +85,7 @@ module CalController(
     mulAll mul(mDout, overf2, data_in, acc[47:0], opcode);
     
     singlePulser pulse(sigout, !sended, clk);
+    singlePulser pulse2(sigout2, sigout, clk);
     
     always @(negedge sended) begin
         isflow = 0;
@@ -157,6 +130,6 @@ module CalController(
     end
     
     assign overflow = isflow;
-    assign done = sigout;
+    assign done = sigout | sigout2;
     assign data_out = out;
 endmodule

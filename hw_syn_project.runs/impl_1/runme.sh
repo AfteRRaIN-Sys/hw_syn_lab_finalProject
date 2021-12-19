@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/AquaTimeZ/Desktop/tmp/hw_syn_project/hw_syn_project.runs/impl_1'
+HD_PWD='C:/Users/AquaTimeZ/Desktop/hw_syn_lab_finalProject/hw_syn_lab_finalProject/hw_syn_project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

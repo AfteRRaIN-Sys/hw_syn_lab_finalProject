@@ -1,9 +1,17 @@
 module receiver(
     input clk, //baud
     input bit_in,
-    output reg received,
+    //output reg received,
+    output wire rout,
     output reg [7:0] data_out
     );
+    
+    reg received = 0;
+    wire sr1,sr2;
+    singlePulser pulse1(sr1, received, clk);
+    singlePulser pulse2(sr2, sr1, clk);
+    assign rout = sr1 | sr2;
+    
     
     reg last_bit;
     reg receiving = 0;

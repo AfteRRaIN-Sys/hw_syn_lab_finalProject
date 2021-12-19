@@ -24,10 +24,27 @@ module inputModule(
     input clk,
     input [7:0]data_in,
     input ena,
-    output wire [47:0]nums, //48 bit
-    output [2:0]ops_out,
-    output cal_out
+    //output wire [47:0]nums, //48 bit
+    output wire [47:0]mock_num,
+    //output [2:0]ops_out,
+    output wire [2:0]mock_ops,
+//    output cal_out
+    output wire mock_calout
 );
+
+    assign mock_num = 48'h000000000010;
+    assign mock_ops = 3'b001;
+    
+    reg m = 0;
+    integer j = 0;
+    always @(posedge clk) begin
+        j <= j+1;
+        if (j >= 2000) begin
+            m = ~m;
+            j<=0;
+        end
+    end
+    assign mock_calout = m;
     
     reg [23:0] int_buffer;
     reg [23:0] fp_buffer;
@@ -41,7 +58,10 @@ module inputModule(
     reg [3:0]translated;
     
     reg calReady;
-    assign cal_out = calReady;
+    wire cal_out1;
+    singlePulser pulse1(cal_out1, calReady, clk);
+    singlePulser pulse2(cal_out2, cal_out1, clk);
+    assign cal_out = cal_out1 | cal_out2;
     
     reg [2:0]ops;
     assign ops_out = ops;
@@ -103,7 +123,7 @@ module inputModule(
             //period
             8'h2e : translated <=4'hE;
             //enter
-            8'h0A : translated <=4'hF;
+            8'h0d : translated <=4'hF;
             
             default : translated <=4'h0; 
         endcase
@@ -122,11 +142,13 @@ module inputModule(
 //        if (change_state) begin
 //            change_state = 1'b0;
 //        end
+        period_counter <= period_counter + 2'd1;
         if (write_en == 1'b1) begin
-            write_en <= 0'b0;
+            write_en <= 1'b0;
         end
         if (calReady == 1'b1) begin
             calReady <= 1'b0;
+            //ops <= 2'b000;
         end
 //        if (ena) begin
             if (translated == 4'hE) begin
@@ -143,8 +165,8 @@ module inputModule(
                 state <= 1'b0;   
                 fp_buffer <= 24'd0;
                 int_buffer <= 24'd0;
-                ops <= 2'b000;
                 translated <= 4'd0; //might cause trouble
+                period_counter <= 2'd0;
             end
             else if (translated == 4'hA) begin
                 //get plus

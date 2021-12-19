@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,420.640 ns"></ZoomStartTime>
-      <ZoomEndTime time="2,035.641 ns"></ZoomEndTime>
-      <Cursor1Time time="1,683.140 ns"></Cursor1Time>
+      <ZoomStartTime time="5,002.560 ns"></ZoomStartTime>
+      <ZoomEndTime time="6,034.365 ns"></ZoomEndTime>
+      <Cursor1Time time="6,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="256"></NameColumnWidth>
-      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+      <NameColumnWidth column_width="180"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="28" />
    <wvobject fp_name="/testInput/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -103,5 +103,33 @@
    <wvobject fp_name="/testInput/n1/n_clk" type="logic">
       <obj_property name="ElementShortName">n_clk</obj_property>
       <obj_property name="ObjectShortName">n_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/c1/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[48:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[48:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/c1/acc" type="array">
+      <obj_property name="ElementShortName">acc[48:0]</obj_property>
+      <obj_property name="ObjectShortName">acc[48:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/c1/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/c1/sended" type="logic">
+      <obj_property name="ElementShortName">sended</obj_property>
+      <obj_property name="ObjectShortName">sended</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/c1/overflow" type="logic">
+      <obj_property name="ElementShortName">overflow</obj_property>
+      <obj_property name="ObjectShortName">overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/c1/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[47:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testInput/o1/o_dout" type="array">
+      <obj_property name="ElementShortName">o_dout[111:0]</obj_property>
+      <obj_property name="ObjectShortName">o_dout[111:0]</obj_property>
    </wvobject>
 </wave_config>

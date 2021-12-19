@@ -220,7 +220,7 @@ module byteAdder(
                         4'h7 : begin value_out = 4'h0; cout = 1'h1; end
                         4'h8 : begin value_out = 4'h1; cout = 1'h1; end
                         4'h9 : begin value_out = 4'h2; cout = 1'h1; end
-                        default: begin value_out = 4'h3; cout = 1'h1; end
+                        default: begin value_out = 4'h3; cout = 1'h0; end
                     endcase
                 end
                 4'h4 : begin
